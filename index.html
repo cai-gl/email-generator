@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./styles/index.css">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+    <div class="container-main">
+        <div class="char-count">0</div>
+        <div class="form-elements">
+            <div class="elements-container">
+                <div class="close">x</div>
+                <div class="element-selection">
+                    <!-- <div class="element-btn active header-btn" data-name="header">
+                        <img class="element-img" src="./assets/header.png">
+                        <span>Header</span>
+                    </div>
+                    <div class="element-btn active" data-name="footer">
+                        <img class="element-img" src="./assets/footer.svg">
+                        <span>Footer</span>
+                    </div> -->
+                    <!-- <div class="element-btn">
+                        <img class="element-img" src="./assets/footer.svg">
+                        <span>Banner</span>
+                    </div> -->
+                    <div class="element-btn active" data-name="title">
+                        <img class="element-img png" src="./assets/title.png">
+                        <span>Title</span>
+                    </div>
+                    <div class="element-btn active" data-name="heading">
+                        <img class="element-img png" src="./assets/heading.png">
+                        <span>Heading</span>
+                    </div>
+                    <div class="element-btn active" data-name="subheading">
+                        <img class="element-img png" src="./assets/subheading.png">
+                        <span>Subheading</span>
+                    </div>
+                    <div class="element-btn active" data-name="preview">
+                        <img class="element-img png" src="./assets/preview.png">
+                        <span>Preview Text</span>
+                    </div>
+                    <div class="element-btn active" data-name="paragraph">
+                        <img class="element-img" src="./assets/text.svg">
+                        <span>Paragraph</span>
+                    </div>
+                    <div class="element-btn inactive">
+                        <img class="element-img png" src="./assets/orderedList.png">
+                        <span>Ordered List</span>
+                    </div>
+                    <div class="element-btn inactive">
+                        <img class="element-img png" src="./assets/unorderedList.png">
+                        <span>List</span>
+                    </div>
+                    <div class="element-btn active" data-name="image">
+                        <img class="element-img" src="./assets/image.svg">
+                        <span>Image</span>
+                    </div>
+                    <!-- <div class="element-btn"><span>Centered Image w/ Button</span></div>
+                    <div class="element-btn"><span>Centered Image w/ Button and Text</span></div>
+                    <div class="element-btn"><span>Image</span></div>
+                    <div class="element-btn"><span>Image w/ Button</span></div>
+                    <div class="element-btn"><span>Image w/ Buttons and Text</span></div> -->
+                    <div class="element-btn inactive">
+                        <img class="element-img" src="./assets/imagePair.png">
+                        <span>Image Pair</span>
+                    </div>
+                    <!-- <div class="element-btn"><span>Image Pair w/ Text</span></div>
+                    <div class="element-btn"><span>Image Pair w/ Buttons and Text</span></div> -->
+                    <div class="element-btn active" data-name="button">
+                        <img class="element-img" src="./assets/button.svg">
+                        <span>Button</span>
+                    </div>
+                    <!-- <div class="element-btn"><span>Centered Button</span></div> -->
+                    <!-- <div class="element-btn"><span>Button Pair</span></div> -->
+                    <div class="element-btn inactive" data-name="help">
+                        <img class="element-img png" src="./assets/help.png">
+                        <span>Help Text</span>
+                    </div>
+                    <div class="element-btn inactive">
+                        <img class="element-img png" src="./assets/link.png">
+                        <span>Link</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="heading-container">
+                <h1 class="title">LEARN@COX EMAIL TEMPLATE GENERATOR</h1>
+            </div>
+            <div class="body-container">
+                <div class="main">
+                    <div class="form-container">
+                        <div class="form-content">
+                            <!-- <div class="add-element">
+                                <div class="add-spacer"></div>
+                                <div class="add-element-btn">+</div>
+                                <div class="add-spacer"></div>
+                            </div> -->
+                            <div class="form-control">
+                                <div class="element-container" data-position="0">
+                                    <div class="element" data-position="0">
+                                        <h2 class="element-title">Header</h2>
+                                        <span class="label">IMAGE SOURCE URL</span>
+                                        <input class="input header-url" type="text" value="https://media.coxenterprises.com/media/cai/notification_templates/general/registration/LAC_Calendar_Hero.png">
+                                    </div>
+                                    <div class="add-element" data-position="0">
+                                        <div class="add-spacer"></div>
+                                        <div class="add-element-btn">+</div>
+                                        <div class="add-spacer"></div>
+                                    </div>
+                                </div>
+                                <div class="element-container" data-type="text" data-element="h2" data-position="1">
+                                    <div class="element" data-position="1">
+                                        <div class="delete">x</div>
+                                        <h2 class="element-title ele-title">Title</h2>
+                                        <span class="label">TEXT</span>
+                                        <input class="input title-text" type="text" value="Congratulations!">
+                                    </div>
+                                    <div class="add-element" data-position="1">
+                                        <div class="add-spacer"></div>
+                                        <div class="add-element-btn">+</div>
+                                        <div class="add-spacer"></div>
+                                    </div>
+                                </div>
+                                <div class="element-container" data-type="text" data-element="p" data-position="2">
+                                    <div class="element" data-position="2">
+                                        <div class="delete">x</div>
+                                        <h2 class="element-title ele-paragraph">Paragraph</h2>
+                                        <span class="label">TEXT</span>
+                                        <textarea class="input paragraph-text" type="text">You are now using the Learn@Cox Email Template Generator! Add elements by clicking on the "+".</textarea>
+                                    </div>
+                                    <div class="add-element" data-position="2">
+                                        <div class="add-spacer"></div>
+                                        <div class="add-element-btn">+</div>
+                                        <div class="add-spacer"></div>
+                                    </div>
+                                </div>
+                                <div class="element-container" data-type="text" data-element="h4" data-position="3">
+                                    <div class="element" data-position="3">
+                                        <div class="delete">x</div>
+                                        <h2 class="element-title ele-subheading">Subheading</h2>
+                                        <span class="label">TEXT</span>
+                                        <input class="input subheading-text" type="text" value="Customize Your Emails!">
+                                    </div>
+                                    <div class="add-element" data-position="3">
+                                        <div class="add-spacer"></div>
+                                        <div class="add-element-btn">+</div>
+                                        <div class="add-spacer"></div>
+                                    </div>
+                                </div>
+                                <div class="element-container" data-type="text" data-element="p" data-position="4">
+                                    <div class="element" data-position="4">
+                                        <div class="delete">x</div>
+                                        <h2 class="element-title ele-paragraph">Paragraph</h2>
+                                        <span class="label">TEXT</span>
+                                        <textarea class="input paragraph-text" type="text">You can add your own text, images, and custom HTML using this generator.</textarea>
+                                    </div>
+                                    <div class="add-element" data-position="4">
+                                        <div class="add-spacer"></div>
+                                        <div class="add-element-btn">+</div>
+                                        <div class="add-spacer"></div>
+                                    </div>
+                                </div>
+                                <div class="element-container" data-type="text" data-element="h4" data-position="5">
+                                    <div class="element" data-position="5">
+                                        <div class="delete">x</div>
+                                        <h2 class="element-title ele-subheading">Subheading</h2>
+                                        <span class="label">TEXT</span>
+                                        <input class="input subheading-text" type="text" value="Easily Generate HTML!">
+                                    </div>
+                                    <div class="add-element" data-position="5">
+                                        <div class="add-spacer"></div>
+                                        <div class="add-element-btn">+</div>
+                                        <div class="add-spacer"></div>
+                                    </div>
+                                </div>
+                                <div class="element-container" data-type="text" data-element="p" data-position="6">
+                                    <div class="element" data-position="6">
+                                        <div class="delete">x</div>
+                                        <h2 class="element-title ele-paragraph">Paragraph</h2>
+                                        <span class="label">TEXT</span>
+                                        <textarea class="input paragraph-text" type="text">You can click "Generate HTML" to copy the HTML content of this preview to your clipboard.</textarea>
+                                    </div>
+                                    <div class="add-element" data-position="6">
+                                        <div class="add-spacer"></div>
+                                        <div class="add-element-btn">+</div>
+                                        <div class="add-spacer"></div>
+                                    </div>
+                                </div>
+                                <div class="element-container" data-type="feature" data-element="img" data-position="7">
+                                    <div class="element" data-position="7">
+                                        <div class="delete">x</div>
+                                        <h2 class="element-title ele-image">Image</h2>
+                                        <span class="label">IMAGE SOURCE URL</span>
+                                        <input class="input image-url" type="text" value="https://i.ibb.co/4VftrL5/businessacumen.png">
+                                        <span class="label">IMAGE TEXT</span>
+                                        <input class="input image-text" type="text" value="Streamline your workflow">
+                                        <span class="label">SPACING</span>
+                                        <input class="input image-space" type="number" min="15" max="350" value="15">
+                                    </div>
+                                    <div class="add-element" data-position="7">
+                                        <div class="add-spacer"></div>
+                                        <div class="add-element-btn">+</div>
+                                        <div class="add-spacer"></div>
+                                    </div>
+                                </div>
+                                <div class="element-container" data-type="feature" data-element="button" data-position="8">
+                                    <div class="element" data-position="8">
+                                        <div class="delete">x</div>
+                                        <h2 class="element-title ele-button">Button</h2>
+                                        <span class="label">BUTTON TEXT</span>
+                                        <input maxlength="21" class="input button-text" type="text" value="Go To Learn@Cox">
+                                        <span class="label">LINK</span>
+                                        <input class="input button-url" type="text" value="https://cox.sumtotal.host">
+                                        <span class="label">SPACING</span>
+                                        <input class="input button-space" type="number" min="15" max="350" value="15">
+                                    </div>
+                                    <div class="add-element" data-position="8">
+                                        <div class="add-spacer"></div>
+                                        <div class="add-element-btn">+</div>
+                                        <div class="add-spacer"></div>
+                                    </div>
+                                </div>
+                                <div class="element-container" data-position="10">
+                                    <div class="element">
+                                        <h2 class="element-title ele-footer">Footer</h2>
+                                        <span class="label">IMAGE SOURCE URL</span>
+                                        <input class="input footer-url" type="text" value="https://media.coxenterprises.com/media/cai/notification_templates/general/footer/LAC_Footer.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <div class="button btn-preview">Generate Preview</div>
+                            <div class="button btn-html">Generate HTML</div>
+                        </div>
+                    </div>
+                    <div class="preview-container">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./generator.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
