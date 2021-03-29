@@ -7,7 +7,11 @@
 <meta charset="utf-8">
 </head>
 <body>
+    <!--[if lt IE 10]>
+        <div style="color: red;" class="broswer-warning">You are using an incompatible broswer. Please try using another broswer.</div>
+    <![endif]-->
     <div class="container-main">
+        <div id="broswerWarning"></div>
         <div class="char-count">0</div>
         <div class="form-elements">
             <div class="elements-container">
@@ -62,7 +66,7 @@
                     <div class="element-btn"><span>Image</span></div>
                     <div class="element-btn"><span>Image w/ Button</span></div>
                     <div class="element-btn"><span>Image w/ Buttons and Text</span></div> -->
-                    <div class="element-btn inactive">
+                    <div class="element-btn active" data-name="image-pair">
                         <img class="element-img" src="./assets/imagePair.png">
                         <span>Image Pair</span>
                     </div>
@@ -74,7 +78,7 @@
                     </div>
                     <!-- <div class="element-btn"><span>Centered Button</span></div> -->
                     <!-- <div class="element-btn"><span>Button Pair</span></div> -->
-                    <div class="element-btn inactive" data-name="help">
+                    <div class="element-btn active" data-name="help">
                         <img class="element-img png" src="./assets/help.png">
                         <span>Help Text</span>
                     </div>
@@ -197,8 +201,12 @@
                                         <input class="input image-url" type="text" value="https://i.ibb.co/4VftrL5/businessacumen.png">
                                         <span class="label">IMAGE TEXT</span>
                                         <input class="input image-text" type="text" value="Streamline your workflow">
+                                        <span class="label">IMAGE WIDTH</span>
+                                        <input class="input image-width" type="number" max="565" value="210">
+                                        <span class="label">IMAGE HEIGHT</span>
+                                        <input class="input image-height" type="number" max="565" value="120">
                                         <span class="label">SPACING</span>
-                                        <input class="input image-space" type="number" min="15" max="350" value="15">
+                                        <input class="input image-space input-num" type="number" min="15" max="350" value="15">
                                     </div>
                                     <div class="add-element" data-position="7">
                                         <div class="add-spacer"></div>
@@ -215,7 +223,7 @@
                                         <span class="label">LINK</span>
                                         <input class="input button-url" type="text" value="https://cox.sumtotal.host">
                                         <span class="label">SPACING</span>
-                                        <input class="input button-space" type="number" min="15" max="350" value="15">
+                                        <input class="input button-space input-num" type="number" min="15" max="350" value="15">
                                     </div>
                                     <div class="add-element" data-position="8">
                                         <div class="add-spacer"></div>

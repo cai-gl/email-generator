@@ -255,6 +255,7 @@ body {
     cursor: pointer;
     color: #d0d0d0;
     align-self: flex-end;
+    margin-right: 5px;
 }
 .delete:hover {
     color: #87ceeb;

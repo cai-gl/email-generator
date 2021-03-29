@@ -52,6 +52,13 @@ function generateiFrame() {
                     type: 'text'
                 })
             break;
+            case 'help':
+                email_cont_array.push({
+                    content: `<p style="color: #c7c7c7; font-size: .8em; text-align: center">${$(e).find('.help-text').val()}</p>`,
+                    position: $(e).attr('data-position'),
+                    type: 'text'
+                })
+            break;
         }
     })
 
@@ -60,18 +67,25 @@ function generateiFrame() {
         switch ($(e).attr('data-element')) {
             case 'img':
                 email_cont_array.push({
-                    content: `<tr><td style="padding: 10px"><table border="0" cellpadding="0"><tr height="100"><td class="spacer" width="${$(e).find('.image-space').val()}"></td><td style="font-family:arial,sans-serif;font-size:15px;color:#575757"><img src="${$(e).find('.image-url').val()}" width="210" height="120"><p>${$(e).find('.image-text').val()}</p></td></tr></table></td></tr>`,
+                    content: `<tr><td style="padding: 10px"><table border="0" cellpadding="0"><tr height="100"><td class="spacer" width="${$(e).find('.image-space').val()}"></td><td style="font-family:arial,sans-serif;font-size:15px;color:#575757"><img src="${$(e).find('.image-url').val()}" width="${$(e).find('.image-width').val()}" height="${$(e).find('.image-height').val()}"><p>${$(e).find('.image-text').val()}</p></td></tr></table></td></tr>`,
                     position: $(e).attr('data-position'),
                     type: 'feature'
                 })
-                break;
+            break;
             case 'button':
                 email_cont_array.push({
                     content: `<tr><td style="padding: 0 10px"><table border="0" cellpadding="0"><tr height="100"><td class="spacer" width="${$(e).find('.button-space').val()}"></td><td style="font-family:arial,sans-serif;font-size:15px;color:#575757"><table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation" width="210"><tr><td style="border-radius: 4px; background: #173449; text-align: center;"><a target="_blank" href="${$(e).find('.button-url').val()}" target="_parent" style="background: #173449; border: 1px solid #173449; box-shadow: inset 0 1px 0 0 rgba(0,0,0,0); font-family: arial, sans-serif; font-size: 17px; line-height: 17px; color: #ffffff; text-decoration: none; padding: 13px 17px; display: block; border-radius: 4px; white-space: nowrap;">${$(e).find('.button-text').val()}</a></td></tr></table></td></tr></table></td></tr>`,
                     position: $(e).attr('data-position'),
                     type: 'feature'
                 })
-                break;
+            break;
+            case 'img-pair':
+                email_cont_array.push({
+                    content: `<tr><td style="padding: 10px"><table border="0" cellpadding="0"><tr height="100"><td class="spacer" width="50"></td><td style="font-family:arial,sans-serif;font-size:15px;color:#575757"><img src="${$(e).find('.image-1-url').val()}" width="210" height="120"><p>${$(e).find('.image-1-text').val()}</p></td><td class="spacer" width="60"></td><td style="font-family:arial,sans-serif;font-size:15px;color:#575757"><img src="${$(e).find('.image-2-url').val()}" width="210" height="120"><p>${$(e).find('.image-2-text').val()}</p></td></tr></table></td></tr>`,
+                    position: $(e).attr('data-position'),
+                    type: 'feature'
+                })
+            break;
         }
     })
 
