@@ -10,9 +10,9 @@ $(document).ready(preparePage);
 function preparePage() {
     generateiFrame();
 
-    // window.onbeforeunload = function() {
-    //     return "Data will be lost if you leave the page, are you sure?";
-    // };
+    window.onbeforeunload = function() {
+        return "Data will be lost if you leave the page, are you sure?";
+    };
 
     $('.form-control').on('input', 'input[type="number"]', function(e) {
         var max = parseInt(this.max);
