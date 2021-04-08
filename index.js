@@ -51,6 +51,11 @@ function preparePage() {
         $('.form-elements').css('display', 'none');
     });
 
+    // Delete list items
+    $('.form-control').on('click', '.delete-li', function(e) {
+        $(e.currentTarget).parent().closest('.ol-cont').remove();
+    });
+
     $('.btn-preview').click(() => {
         generateiFrame();
     });
@@ -173,6 +178,38 @@ function createFormElement(e) {
                         </div>`
             $(f_Preview).insertAfter($(`.element-container[data-position="${currentPosition-1}"]`));
         break;        
+        case 'ordered-list':
+            updatePositions();
+            currentPosition++;
+            var f_OrderedList = `<div class="element-container" data-type="text" data-element="ol" data-position="${currentPosition}">
+                            <div class="element" data-position="${currentPosition}">
+                                <div class="delete">x</div>
+                                <h2 class="element-title ele-ol">Ordered List</h2>
+                                <div class="ol-cont">
+                                    <span class="label">1.</span>
+                                    <input class="input ol-text-1" type="text">
+                                </div>
+                                <div class="ol-cont">
+                                    <span class="label">2.</span>
+                                    <input class="input ol-text-2" type="text">
+                                </div>
+                                <div class="ol-cont">
+                                    <span class="label">3.</span>
+                                    <input class="input ol-text-3" type="text">
+                                </div>
+                                <div class="ol-cont">
+                                    <span class="label">4.</span>
+                                    <input class="input ol-text-4" type="text">
+                                </div>
+                            </div>
+                            <div class="add-element" data-position="${currentPosition}">
+                                <div class="add-spacer"></div>
+                                <div class="add-element-btn">+</div>
+                                <div class="add-spacer"></div>
+                            </div>
+                        </div>`
+            $(f_OrderedList).insertAfter($(`.element-container[data-position="${currentPosition-1}"]`));
+        break;
         case 'image':
             updatePositions();
             currentPosition++;
@@ -187,7 +224,7 @@ function createFormElement(e) {
                                 <span class="label">IMAGE WIDTH</span>
                                 <input class="input image-width" type="number" max="565" value="210">
                                 <span class="label">IMAGE HEIGHT</span>
-                                <input class="input image-height" type="number" max="565" value="120">
+                                <input class="input image-height" type="number" max="200" value="120">
                                 <span class="label">SPACING</span>
                                 <input class="input image-space input-num" type="text" min="15" max="350" value="15">
                                 

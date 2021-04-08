@@ -59,6 +59,18 @@ function generateiFrame() {
                     type: 'text'
                 })
             break;
+            case 'ol':
+                email_cont_array.push({
+                    content: `<ol>
+                    ${$(e).find('.ol-text-1').val() != '' ? '<li>' + $(e).find('.ol-text-1').val() + '</li>' : ''}
+                    ${$(e).find('.ol-text-2').val() != '' ? '<li>' + $(e).find('.ol-text-2').val() + '</li>' : ''}
+                    ${$(e).find('.ol-text-3').val() != '' ? '<li>' + $(e).find('.ol-text-3').val() + '</li>' : ''}
+                    ${$(e).find('.ol-text-4').val() != '' ? '<li>' + $(e).find('.ol-text-4').val() + '</li>' : ''}
+                    </ol>`,
+                    position: $(e).attr('data-position'),
+                    type: 'text'
+                })
+            break;
         }
     })
 
