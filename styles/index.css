@@ -223,6 +223,12 @@ body {
     flex-direction: column;
     /* padding: 15px; */
 }
+@keyframes expand {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
 .element {
     display: flex;
     flex-direction: column;
@@ -231,6 +237,7 @@ body {
     transition: border 0.20s;
     border: 1px solid #d0d0d0;
     border-radius: 4px;
+    animation: expand .75s ease-in-out;
 }
 .element:hover {
     border: 1px solid #87ceeb;
@@ -331,5 +338,22 @@ textarea {
     cursor: pointer;
 }
 .ol-cont .delete-li:hover {
+    color:rgb(255, 75, 75);
+}
+
+.ul-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px 0;
+}
+.ul-cont .input {
+    width: 95%;
+}
+.ul-cont .delete-li {
+    color:rgb(255, 149, 149);
+    cursor: pointer;
+}
+.ul-cont .delete-li:hover {
     color:rgb(255, 75, 75);
 }

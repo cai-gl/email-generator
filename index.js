@@ -29,8 +29,9 @@ function preparePage() {
 
     // Delete existing form elements by clicking the "x"
     $('.form-control').on('click', '.delete', function(e) {
-        $(e.currentTarget).parent().closest('.element-container').remove();
-        console.log($(e.currentTarget).parent().data('position'))
+        var t = $(e.currentTarget).parent().closest('.element-container');
+        t.hide('slow', function(){ t.remove(); });
+        console.log($(e.currentTarget).parent().data('position'));
     });
 
     // Open the popup to add a new form element
@@ -43,7 +44,8 @@ function preparePage() {
         $('.form-elements').css('display', 'flex');
     });
     $('.element-btn').click((e) => {
-        createFormElement(e)
+        createFormElement(e);
+        $('.form-elements').css('display', 'none');
     })
 
     // Close the popup
@@ -209,6 +211,38 @@ function createFormElement(e) {
                             </div>
                         </div>`
             $(f_OrderedList).insertAfter($(`.element-container[data-position="${currentPosition-1}"]`));
+        break;
+        case 'unordered-list':
+            updatePositions();
+            currentPosition++;
+            var f_UnorderedList = `<div class="element-container" data-type="text" data-element="ul" data-position="${currentPosition}">
+                            <div class="element" data-position="${currentPosition}">
+                                <div class="delete">x</div>
+                                <h2 class="element-title ele-ul">Bulleted List</h2>
+                                <div class="ul-cont">
+                                    <span class="label">&bull;</span>
+                                    <input class="input ul-text-1" type="text">
+                                </div>
+                                <div class="ul-cont">
+                                    <span class="label">&bull;</span>
+                                    <input class="input ul-text-2" type="text">
+                                </div>
+                                <div class="ul-cont">
+                                    <span class="label">&bull;</span>
+                                    <input class="input ul-text-3" type="text">
+                                </div>
+                                <div class="ul-cont">
+                                    <span class="label">&bull;</span>
+                                    <input class="input ul-text-4" type="text">
+                                </div>
+                            </div>
+                            <div class="add-element" data-position="${currentPosition}">
+                                <div class="add-spacer"></div>
+                                <div class="add-element-btn">+</div>
+                                <div class="add-spacer"></div>
+                            </div>
+                        </div>`
+            $(f_UnorderedList).insertAfter($(`.element-container[data-position="${currentPosition-1}"]`));
         break;
         case 'image':
             updatePositions();
