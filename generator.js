@@ -119,9 +119,9 @@ function generateiFrame() {
     var footer_image_url = $('.footer-url').val();
 
     // HTML-based modules
-    var preview_text_container = `<div style="display: none; opacity: 0; mso-hide: all;">${preview_text}</div>`;
+    var preview_text_container = `<div style="display: none; opacity: 0; mso-hide: all;">${preview_text || 'A message from Learn@Cox...'}</div>`;
 
-    var header_image = `<tr><td height="115"><img alt="Learn@Cox Header" width="620" style="height:100%;width:620px;" src="${header_image_url}"></td></tr>`;
+    var header_image = `<tr><td height="115"><img alt="Learn@Cox Header" width="620" style="height:100%;width:100%;" src="${header_image_url}"></td></tr>`;
 
     var footer_image = `<tr><td height="65"><img alt="CAI_Footer" width="620" style="width:620px;height:100%" src="${footer_image_url}"></td></tr>`;
 
