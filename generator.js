@@ -178,7 +178,7 @@ function generateiFrame() {
     email_container = `
     <!doctype html><html><head><meta charset="utf-8"></head><body width="620" style="margin: 0; padding: 0 !important; background: #f3f3f5; mso-line-height-rule: exactly;"><center style="width: 100%; background: #f3f3f5;">${preview_text_container}<div style="width: 620px; margin: 0 auto;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:620px;">
     ${data[0].header ? header_image : ''}
-    <tr><td style="background-color:#ffffff;"><table border="0"cellpadding="0"cellspacing="0"role="presentation"style="width:620px;"align="left">
+    <tr><td style="background-color:#ffffff;"><table border="0"cellpadding="0"cellspacing="0"role="presentation"style="width:100%;"align="left">
     ${final_content}
     </table></td></tr>
     ${data[0].footer ? footer_image : ''}
