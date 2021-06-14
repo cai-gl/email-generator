@@ -6,7 +6,7 @@ function generateiFrame() {
     var email_cont_array = [];
 
     // Build the JSON to create the preview & HTML
-    if($('.header-url').val() == '')
+    if($('.header-url-1').val() == '' && $('.header-url-2').val() == '')
     {
         data[0].header = false;
     }
@@ -115,7 +115,7 @@ function generateiFrame() {
 
     // Module text variables
     var preview_text = $('.preview-text').val();
-    var header_image_url = $('.header-url').val();
+    var header_image_url = $('.header-url-1').val() || $('.header-url-2').val();
     var footer_image_url = $('.footer-url').val();
 
     // HTML-based modules
